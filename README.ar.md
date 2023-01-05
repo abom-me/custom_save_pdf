@@ -1,20 +1,20 @@
 # custom_save_pdf:
 
 
-####  Flutter  Package  allowed you to saving pdf files in custom folder in phone storage
+###  باكج فلاتر يسمح لك بحفظ ملفات البي دي اف في مجلد مخصص على الهاتف
 
 ------------------
 
-### Change To  [عربي](README.ar.md) Version
+### Change To  [English](README.md) Version
 
 -------------------
-## # 👨‍💻 *Developed  by:*
+### #  *:👨‍💻تم تطوير هذا الباكج من قبِل*  
 
 <img alt="profile" src="https://abom.me/packages/profile.png" width="50" height="50"  style=" border-radius: 100%"/>
 
 **Nasr Al-Rahbi [@abom_me](https://twitter.com/abom_me)**
 
-## 👨🏻‍💻 Find me in  :
+## 👨🏻‍💻 أضفني هنا  :
 [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/abom_me)
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/abom.me)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/nasr-al-rahbi-08a573245)
@@ -27,7 +27,7 @@
 **custom_save_pdf:** using the official [open_document](https://pub.dev/packages/open_document) & [path_provider](https://pub.dev/packages/path_provider) & [permission_handler](https://pub.dev/packages/permission_handler).
 <br>
 <br>
-### ⚠️ The Requirement ⚠️ :
+### ⚠️ المتطلبات ⚠️ :
 
 |             | Android   | iOS    |
 | ----------- |-----------| ------ | 
@@ -36,15 +36,18 @@
 
 
 
-## Setup:
+## التنصيب:
 
-Pubspec changes:
+اضف الباكج في المشروع
+<br>
+<br>
+Pubspec :
 
 ```
       dependencies:
         custom_save_pdf: <last_verison>
 ```
-Sample example:
+مثال بسيط: 
 
 ```dart
 import 'package:custom_save_pdf/custom_save_pdf.dart';
@@ -60,15 +63,21 @@ print(code);
 });
 ```
 
-## Getting Started
+## بدأ التثبيت
 
 
-- **You Should Follow all the instructions carefully**  
+- **يجب عليك اتباع جميع الخطوات بحرص تام لكي لا تواجه أي مشاكل**
 <details>
  <summary style="font-size: 15px">-----Android-----------</summary>
 
 
-1. You should  make sure to set the correct `minSdkVersion` in `android/app/build.gradle` :
+1. قم بتغيير رقم ال 
+   <br>
+`minSdkVersion`
+  <br>
+ في
+   <br>
+ `android/app/build.gradle` :
 
 
 
@@ -81,7 +90,11 @@ android {
 }
 ```
 
-2-You should  make sure to set the correct `compileSdkVersion` in `android/app/build.gradle` :
+2-  عليك التأكد بتغيير ال 
+<br>
+`compileSdkVersion`
+<br>in
+<br>`android/app/build.gradle` :
 
 
 
@@ -93,26 +106,31 @@ android {
 }
 ```
 
-3-Add this  in `android/app/build.gradle` :
+3-  اضف هذا الكود في ال
+<br>
+`android/app/build.gradle` :
 
 
 
 
 ```xml
 
-<!-- First add this  -->
+<!-- اولا اضف هذه الاسطر  -->
  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.INTERNET" />
 
 
 <application
-        <!-- now add this line in application   -->
+        <!-- الان اضف هذا السطر في ال   -->
+        <!-- application   -->
 android:requestLegacyExternalStorage="true"
 ...
         >
 
-        <!--  add this code inside  tag application   -->
+        <!--  اضف هذا الكود بداخل ال   -->
+        <!-- application   -->
+
 <provider
 android:name="androidx.core.content.FileProvider"
 android:authorities="{the pakage of app}.{the app name}.fileprovider"
@@ -125,10 +143,21 @@ android:grantUriPermissions="true">
 
 ```
 
-3- Go to android/app/src/main/res  and  create folder name it  xml then  create provider_paths.xml
+3- اذهب الى
+<br>
+android/app/src/main/res
+<br>
+وأنشئ مجلد جديد باسم:
+<br>
+xml 
+و الان انشئ بداخله:
+<br>
+provider_paths.xml
 ```xml
 
-<!-- Add this code in provider_paths.xml  -->
+<!-- اضف هذا الكود بداخل:  -->
+<!--  provider_paths.xml  -->
+
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
     <external-path
@@ -143,22 +172,23 @@ android:grantUriPermissions="true">
 <details>
  <summary style="font-size: 15px">-----IOS-----------</summary>
 
-### Note: 
-#### In IOS your folder will be created in the app folder  
-#### Example In File App :  App_name/your_folder/your_pdf
+### ملاحظة:
+في الايفون سوف يتم انشاء و حفظ مجلدك    بداخل المجلد الخاص بالتطبيق اسمه نفس اسم التطبيق، في تطبيق الملفات
 
 <br>
+<br>
+<br>
+1- اضف هذا الكود في:
+<br>info.plist:
 
-
-1- add this code in info.plist:
 ````plist
  <key>LSSupportsOpeningDocumentsInPlace</key>
     <true/>
 ````
 </details>
 
-### -------------------------------------------------
 
+### -------------------------------------------------
 
 See the `example` directory for a complete sample app.
 

@@ -1,6 +1,6 @@
 name: custom_save_pdf
 description: Flutter  Package  allowed you to saving pdf files in custom folder in phone storage
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/abom-me/custom_save_pdf
 
 environment:
@@ -19,6 +19,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  lints: ^2.0.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
