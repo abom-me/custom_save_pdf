@@ -1,11 +1,8 @@
-import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter/services.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
-
-import 'model/product.dart';
 
 class PdfInvoiceService {
   Future<Uint8List> createHelloWorld(String Text) async {
